@@ -16,7 +16,7 @@ var lista = new Vue({
         ]},
     methods:{
         sumarCantidad: function(){
-            alert("Estas agregando uno")
+            alert("Estas agregando UNO")
         }
     }
 });
