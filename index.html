@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>VUE</title>
+</head>
+<body>
+    <div id="titulo">
+        <h1>{{  titulo }}</h1>
+    </div>
+
+
+
+    <div id = "lista">
+            <ul>
+                <li v-for="elemento in herramientas">
+                    <h3>{{elemento.herramienta}}    {{elemento.cantidad}}
+                    <span v-if ="elemento.cantidad <= 0">SIN STOCK</span></h3>
+                    <button v-on:click= "sumarCantidad(),elemento.cantidad++">Agregar</button>
+                    <span v-if = "elemento.cantidad > 0"><button @click= "elemento.cantidad--">Quitar</button></span>
+                </li>
+            </ul>  
+    </div>
+
+
+
+    <script src ="index.js"></script>
+</body>
+</html>
